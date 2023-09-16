@@ -1,8 +1,8 @@
-# How to use this Proactive message bots app
+# How to use this PullRequest message bot app
 
 A bot, chatbot, or conversational bot is an app that responds to simple commands sent in chat and replies in meaningful ways. Examples of bots in everyday use include: bots that notify about build failures, bots that provide information about the weather or bus schedules, or provide travel information. A bot interaction can be a quick question and answer, or it can be a complex conversation. Being a cloud application, a bot can provide valuable and secure access to cloud services and corporate resources.
 
-This is a sample which shows how to save user's conversation reference information to send proactive reminder message using Bots.
+This is a sample which shows how to save user's conversation reference information to send message using a bot.
 
 ## Prerequisites
 
@@ -27,10 +27,7 @@ Both files contain template arguments with `{...}` statements which will be repl
 
 **Note**: If you are facing any issue in your app, please uncomment [this](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging-teamsfx/bot/index.js#L28) line and put your debugger for local debug.
 
-> Important Notes! This sample is under upgrading, please expect errors if you attempted to provision and deploy the app to cloud.
-> Once the sample complete upgrading, this notice will be removed. And the sample will be ready to be deployed to cloud by then.
-> Before that, please debug and run this sample app locally!
-> 
+ 
 ## Deploy to Azure
 
 Deploy your project to Azure by following these steps:
@@ -76,11 +73,10 @@ Once deployed, you may want to distribute your application to your organization'
 
 This sample provides following functionality:
 
-- You can send any command to bot to get the same message echoed back.
+- You can make a post request to http://localhost:3978/api/notify with conversationId:<conversationId> and message in the request body to send a message in that conversation.
+- Sends a welcome message when a new member is added to the channel or group chat.
 
-- You can navigate to http://localhost:3978/api/notify to proactively message everyone who has previously messaged this bot.
-
-  ![ShareMessage](./images/send-proactive-messages.gif)
+  ![ShareMessage](./images/postRequest.png)
 
 
 ## Further reading
